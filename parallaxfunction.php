@@ -9,7 +9,7 @@
  
 
 // Adds parallax to all featured images, adds top margin if there is no featured image
-	add_action ('genesis_before','use_parallax');
+	add_action ('the_post','use_parallax');
 	function use_parallax() { 
 		if ( has_post_thumbnail() ) {
 			$parallaxImage = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large'); 
